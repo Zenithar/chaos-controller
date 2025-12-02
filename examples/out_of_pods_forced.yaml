@@ -1,0 +1,19 @@
+# Unless explicitly stated otherwise all files in this repository are licensed
+# under the Apache License Version 2.0.
+# This product includes software developed at Datadog (https://www.datadoghq.com/).
+# Copyright 2025 Datadog, Inc.
+
+apiVersion: chaos.datadoghq.com/v1beta1
+kind: Disruption
+metadata:
+  name: out-of-pods-forced
+  namespace: chaos-demo
+spec:
+  level: node # selector targets nodes
+  selector:
+    node.kubernetes.io/instance-type: k3s
+  count: 1
+  duration: 5m
+  outOfPods:
+    forced: true # applies NoExecute taint, evicting existing pods and preventing new ones
+
