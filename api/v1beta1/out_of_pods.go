@@ -47,4 +47,3 @@ func (s *OutOfPodsSpec) Explain() []string {
 
 	return []string{"", explanation}
 }
-
