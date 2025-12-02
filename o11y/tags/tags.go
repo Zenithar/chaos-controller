@@ -79,7 +79,9 @@ const (
 	ContainerKey     = "container"
 
 	// Node
-	NodeNameKey = "node_name"
+	NodeNameKey    = "node_name"
+	TaintKeyKey    = "taint_key"
+	TaintEffectKey = "taint_effect"
 
 	// StatefulSet
 	StatefulSetNameKey = "stateful_set_name"
